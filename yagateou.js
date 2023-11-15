@@ -1,3 +1,6 @@
+/*
+v1 create
+*/
 
 var fn={}
 fn.q=d=>document.querySelector(d)
@@ -41,7 +44,6 @@ class yagateou{
       }
       this.remove()      
     }).press('ctrl+Enter',()=>this.appendSib(new yagateou().frame))
-    
 
   }
   make(){
@@ -102,9 +104,13 @@ class yagateou{
 }
 
 
+/////////////////////////////////
+/////////////////////////////////
+/*
+v1 create
+v2 saveMissBlock
+*/
 
-/////////////////////////////////
-/////////////////////////////////
 
 export class yagateouSite{
   target =fn.q('article')
@@ -136,6 +142,9 @@ export class yagateouSite{
     }).press('Enter',(e)=>this.makeNav())
       .press('*',(e)=>bar.go(10),500)
 
+    //v2
+    this.saveMissBlock()    
+
     this.makeNav()
   }
   async makeNav(){
@@ -165,7 +174,16 @@ export class yagateouSite{
   save(){
     return this.api.save(this.getData())
   }
-
+  saveMissBlock(){
+    window.onbeforeunload = function(e) {
+      if(this.bar.getValue() === 0){
+      return
+    }
+      e.returnValue = "行った変更が保存されません。よろしいですか？";
+   }    
+  }
+  
+//
 }
 
 function lip(data){
