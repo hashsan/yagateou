@@ -110,6 +110,7 @@ class yagateou{
 v1 create
 v2 saveMissBlock
 v3 loading with bar moving
+v4 saveMissBlock retry
 */
 
 
@@ -180,13 +181,14 @@ export class yagateouSite{
     return this.api.save(this.getData())
   }
   saveMissBlock(){
-    window.onbeforeunload = function(e) {
-      //if(this.bar.getValue() === 0){
-      //return
-      //}
+    const bar = this.bar
+    window.onbeforeunload = (e) =>{ //v4
+      if(bar.getValue() === 0){
+        return
+      }
       e.returnValue = "行った変更が保存されません。よろしいですか？";
-   }    
-  }
+    }  
+  }  
   
 //
 }
