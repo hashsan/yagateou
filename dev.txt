@@ -106,6 +106,19 @@ return !!parseInt( document.querySelector('.Bar').style.width )
 ---
 　バーの幅が〇でなければ、保存が必要なので、それでチェックできる。ニードセーブなら、警告を表示する。
 　トランスでもいける。バーがあるときには、トランスクラスがある。
+　というよりは、実はこれは、バークラスが、ゲットナンバーなりを実装すればいいので、バーを修正することにする。
 ---
+getValue=()=>{
+   return parseInt(this.bar.style.width)
+}
+---
+　のほうがよい。これによって、使う方は、ゲットバリューが〇以外であれば、セーブが必要である。
+---
+window.onbeforeunload = function(e) {
+  if(this.bar.getValue() === 0){
+    return
+  }
+      e.returnValue = "ページを離れようとしています。よろしいですか？";
+ }
 ---
 
