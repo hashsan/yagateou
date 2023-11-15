@@ -181,9 +181,9 @@ export class yagateouSite{
   }
   saveMissBlock(){
     window.onbeforeunload = function(e) {
-      if(this.bar.getValue() === 0){
-      return
-    }
+      //if(this.bar.getValue() === 0){
+      //return
+      //}
       e.returnValue = "行った変更が保存されません。よろしいですか？";
    }    
   }
