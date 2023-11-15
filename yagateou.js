@@ -152,7 +152,7 @@ export class yagateouSite{
   }
 
   async load(){
-    var data = await this.api.load()
+    var data = await this.api.load()||'＃＃新規ファイル'
     var first = true
     for(let d of lip(data)){
       const ya = new yagateou(d,first)
