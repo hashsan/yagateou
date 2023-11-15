@@ -1,3 +1,9 @@
+/*
+v1 launched
+v2 smooth scroll
+v3 img hover and color to full
+*/
+
 :root{
   --background:#212121;
   --color:#eee;
@@ -17,6 +23,10 @@ html,body{
   line-height:1.6;
 }
 
+/*v2*/
+html {
+    scroll-behavior: smooth;
+}
 
 header,footer,.frame{
   margin:auto;
@@ -54,7 +64,14 @@ header,footer,.frame{
 .frame img{
   object-fit:cover;
   filter:grayscale(0.8);
+  transition: all 1s; /*v3*/  
 }
+
+/*v3*/
+.frame img.shield:hover {
+    filter: unset;
+}
+
 .frame + .frame{
   margin-top:var(--space-big);
 }
