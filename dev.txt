@@ -69,7 +69,9 @@ https://i.pinimg.com/564x/2d/20/f5/2d20f57a8815b14e959e309f2487fe30.jpg
 　修正の方針。
 　まず対象の画像要素にトランジッションを設定する。
 ---
-transition: all 1s;
+.frame img.shield{
+     transition: all 1s;
+}
 ---
 　つぎに画像要素の疑似要素ホバーにフィルター案セットをかける。
 　するとグレイスケールが解除される、１秒かけて。
