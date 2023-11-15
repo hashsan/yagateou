@@ -109,6 +109,7 @@ class yagateou{
 /*
 v1 create
 v2 saveMissBlock
+v3 loading with bar moving
 */
 
 
@@ -123,13 +124,17 @@ export class yagateouSite{
   async init(){
 
     this.api = await getApi()
-
-    await this.load()    
-
+       
     const {Bar} = await import('https://hashsan.github.io/Bar/Bar.js?v=2')
     var bar = new Bar()
     bar.bar.style.position='fixed';
     this.bar = bar;
+
+    //v3
+    bar.go(50)
+    await this.load()     
+    bar.go(100)
+    
     
     //console.log(this.bar)
     const {Press} = await import( "//hashsan.github.io/EditorFrame/EditorFrame.js")
