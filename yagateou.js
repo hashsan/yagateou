@@ -30,7 +30,7 @@ class yagateou{
   }
   async init(){
     
-    const {press} = await import( "//hashsan.github.io/EditorFrame/EditorFrame.js")
+    const {Press} = await import( "//hashsan.github.io/EditorFrame/EditorFrame.js")
     new Press(this.ed).press('*',(e)=>{
       //console.log('in')
       this.checkTitle()
@@ -126,7 +126,7 @@ export class yagateouSite{
     this.bar = bar;
     
     //console.log(this.bar)
-    const {press} = await import( "//hashsan.github.io/EditorFrame/EditorFrame.js")
+    const {Press} = await import( "//hashsan.github.io/EditorFrame/EditorFrame.js")
 
     new Press(document.documentElement)
       .press('ctrl+s',(e)=>{
