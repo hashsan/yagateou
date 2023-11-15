@@ -118,7 +118,7 @@ window.onbeforeunload = function(e) {
   if(this.bar.getValue() === 0){
     return
   }
-      e.returnValue = "ページを離れようとしています。よろしいですか？";
+      e.returnValue = "行った変更が保存されません。よろしいですか？";
  }
 ---
 
