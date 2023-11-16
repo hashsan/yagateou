@@ -6,6 +6,7 @@ v4 spaceing share
 v5 nav 
 v6 header footer image
 v7 effect to .vivid
+v8 img in a 
 */
 
 :root{
@@ -31,6 +32,22 @@ html,body{
 html {
     scroll-behavior: smooth;
 }
+
+::-webkit-scrollbar{
+  background:var(--background);
+  width:4px;
+  height:4px;
+}
+::-webkit-scrollbar-thumb{
+  background:#eeea;
+}
+
+/*debug long*/
+.long{
+  min-height:100vh;
+}
+
+/**/
 
 nav,
 header,footer,.frame{
@@ -142,16 +159,10 @@ nav a:active{
   color:#f26;
 }
 
-::-webkit-scrollbar{
-  background:var(--background);
-  width:4px;
-  height:4px;
-}
-::-webkit-scrollbar-thumb{
-  background:#eeea;
+//v8
+a:has(img) {
+    width: inherit;
+    height: inherit;
+    display: flex;
 }
 
-
-.long{
-  min-height:100vh;
-}
