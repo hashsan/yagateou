@@ -2,6 +2,7 @@
 v1 launched
 v2 smooth scroll
 v3 img hover and color to full
+v4 spaceing share
 */
 
 :root{
@@ -73,7 +74,7 @@ header,footer,.frame{
 }
 
 .frame + .frame{
-  margin-top:var(--space-big);
+  margin-top:var(--space);  //v4
 }
 
 .frame:nth-of-type(even) .shield{
@@ -82,8 +83,11 @@ header,footer,.frame{
   margin-left:var(--space);  
 }
 
-header,footer{
+header{
   margin-top:var(--space-big);
+}
+footer{
+  margin-top:var(--space);   //v4
 }
 footer{
   min-height:10rem;  
