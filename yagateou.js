@@ -132,6 +132,7 @@ v2 saveMissBlock
 v3 loading with bar moving
 v4 saveMissBlock retry
 v5 nav timing input
+v6 infinity the kaigyou
 */
 
 
@@ -230,7 +231,7 @@ function lip(data){
     dat += line + br
   }
   if(dat){
-    ary.push(dat)
+    ary.push( dat.trim() )  //v6 add trim()
   }
   return ary
 }    
