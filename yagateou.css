@@ -5,6 +5,7 @@ v3 img hover and color to full
 v4 spaceing share
 v5 nav 
 v6 header footer image
+v7 effect to .vivit
 */
 
 :root{
@@ -65,6 +66,7 @@ header,footer,.frame{
   outline:none;
 }
 
+img.vivid, /*v7*/
 .frame img{
   object-fit:cover;
   filter:grayscale(0.8);
@@ -72,6 +74,7 @@ header,footer,.frame{
 }
 
 /*v3*/
+img.vivid:hover, /*v7*/
 .frame img.shield:hover {
     filter: unset;
 }
