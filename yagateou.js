@@ -133,6 +133,7 @@ v3 loading with bar moving
 v4 saveMissBlock retry
 v5 nav timing input
 v6 infinity the kaigyou
+v6.1 trigger miss repair
 */
 
 
@@ -225,7 +226,8 @@ function lip(data){
   let ary=[]
   for(const line of data.split('\n')){
     if(/^＃/.test(line) && dat){
-      ary.push(dat)
+      //ary.push(dat)
+      ary.push( dat.trim() )  //v6 add trim()      
       dat=''
     }
     dat += line + br
