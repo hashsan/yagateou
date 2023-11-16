@@ -103,9 +103,23 @@ https://i.pinimg.com/564x/8b/e8/a7/8be8a7d0fa93903ac921137f459d172a.jpg
 　というのを避けるのは、悪くない。
 　ガタッとするのを無くす。
 　まずは、内部的に、ボディにつけないイメージ要素にURLを差し込んで、ロディングが完了したのちに、差し替えたほうが良い気がする。
-
-
-
+　先読みは空のイメージ要素にURLを投入して完了を待つようにする。
+---
+fn.earlyload=(src)=>{return new Promise(sol=>{  
+  const img = new Image()
+  img.onload =()=>sol(src)
+  img.src=src  
+})}
+---
+　プロミス要素にして扱いやすいように。本体には次のように加える。
+---
+fn.q('input').onblur=(e)=>{
+  var src=e.target.value 
+  fn.earlyload(src).then(d=>{
+    fn.q('img').src=src
+  })
+}
+---
 
 
 ＃済み。課題０４、画像をホバーしたら色鮮やかに。
