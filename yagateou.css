@@ -3,6 +3,7 @@ v1 launched
 v2 smooth scroll
 v3 img hover and color to full
 v4 spaceing share
+v5 nav 
 */
 
 :root{
@@ -29,6 +30,7 @@ html {
     scroll-behavior: smooth;
 }
 
+nav,
 header,footer,.frame{
   margin:auto;
   display:flex;
@@ -74,7 +76,7 @@ header,footer,.frame{
 }
 
 .frame + .frame{
-  margin-top:var(--space);  //v4
+  margin-top:var(--space);  /*v4*/
 }
 
 .frame:nth-of-type(even) .shield{
@@ -83,11 +85,12 @@ header,footer,.frame{
   margin-left:var(--space);  
 }
 
+/*
 header{
   margin-top:var(--space-big);
 }
 footer{
-  margin-top:var(--space);   //v4
+  margin-top:var(--space); 
 }
 footer{
   min-height:10rem;  
@@ -98,16 +101,28 @@ footer{
   flex-direction:column;
   padding:var(--space) var(--space-big);
   box-sizing:border-box;
+}*/
+nav {
+    min-height: 10rem;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    /* margin-bottom: 50vh; */
+    display: flex;
+    flex-direction: column;
+    padding: var(--space) var(--space-big);
+    box-sizing: border-box;
+    max-width: 640px;
+    margin: var(--space) auto;
 }
-footer a{
+nav a{
   color:inherit;
   text-decoration:none;
   cursor:pointer;
 }
-footer a:hover{
+nav a:hover{
   background:#eee2;
 }
-footer a:active{
+nav a:active{
   color:#f26;
 }
 
