@@ -159,7 +159,7 @@ nav a:active{
   color:#f26;
 }
 
-//v8
+/*v8*/
 a:has(img) {
     width: inherit;
     height: inherit;
