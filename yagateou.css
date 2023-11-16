@@ -4,6 +4,7 @@ v2 smooth scroll
 v3 img hover and color to full
 v4 spaceing share
 v5 nav 
+v6 header footer image
 */
 
 :root{
@@ -102,6 +103,18 @@ footer{
   padding:var(--space) var(--space-big);
   box-sizing:border-box;
 }*/
+
+/*v6*/
+header img,footer img{
+    object-fit: cover;
+    width: 100%;
+    max-height: 480px;
+    object-position: top;
+}
+footer img{
+    object-position: bottom;  
+}
+
 nav {
     min-height: 10rem;
     border: var(--border);
