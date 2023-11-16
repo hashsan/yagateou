@@ -190,11 +190,6 @@ window.onbeforeunload = function(e) {
 
 https://i.pinimg.com/236x/0f/3b/ff/0f3bff089149ca3b9fc128c3a8c8d739.jpg
 
-
-
-
-
-
 ＃済み。課題０８、遷移防止。
 　直っていないの再度。
 　まずは、ビフォアアンロードを確認するところから。
