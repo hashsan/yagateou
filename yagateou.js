@@ -2,6 +2,7 @@
 v1 create
 v2 ealyload 
 v3 if same src is silent
+v4 paste check
 */
 
 var fn={}
@@ -53,6 +54,12 @@ class yagateou{
       }
       this.remove()      
     }).press('ctrl+Enter',()=>this.appendSib(new yagateou().frame))
+   .press('ctrl+v',(e)=>{
+     //v4 paste is check
+      this.checkTitle()     
+      this.checkImg()  
+  },300)
+    
 
   }
   make(){
