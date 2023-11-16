@@ -186,6 +186,7 @@ window.onbeforeunload = function(e) {
  }
 ---
 　デキてない。再度確認。一度これは済みとして、再度課題としてあげる。
+　追記：解決したので済み。
 
 https://i.pinimg.com/236x/0f/3b/ff/0f3bff089149ca3b9fc128c3a8c8d739.jpg
 
