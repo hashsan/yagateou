@@ -7,6 +7,7 @@ v5 nav
 v6 header footer image
 v7 effect to .vivid
 v8 img in a 
+v9 experience .ampfade
 */
 
 :root{
@@ -81,6 +82,16 @@ header,footer,.frame{
 .frame [contenteditable]{
   padding:var(--space-small);
   outline:none;
+}
+
+/**/
+.ampfade{
+  object-fit:cover;  
+  opacity:0.3;
+  transition:opacity 1s ease-in;
+}
+.ampfade:hover{
+  opacity:1.0;
 }
 
 img.vivid, /*v7*/
