@@ -146,7 +146,7 @@ window.onbeforeunload = function(e) {
 　デキてない。再度確認。一度これは済みとして、再度課題としてあげる。
 　追記：解決したので済み。
 
-https://i.pinimg.com/236x/0f/3b/ff/0f3bff089149ca3b9fc128c3a8c8d739.jpg
+https://i.pinimg.com/564x/3c/b9/b3/3cb9b3c4f30cc7f430f7ab28675326c5.jpg
 ＃済み。課題０８、遷移防止。
 　直っていないの再度。
 　まずは、ビフォアアンロードを確認するところから。
