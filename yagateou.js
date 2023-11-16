@@ -134,6 +134,7 @@ v4 saveMissBlock retry
 v5 nav timing input
 v6 infinity the kaigyou
 v6.1 trigger miss repair
+v7 menu to nav, top and bottom
 */
 
 
@@ -184,7 +185,9 @@ export class yagateouSite{
     const html = this.getEditors()
     .map(d=>`<a href="#${d.parentElement.id}">${d.dataset.title}</a>`)
     .join('\n')
-    fn.q('footer').innerHTML = html;
+    //fn.q('footer').innerHTML = html;  //v7
+    fn.q('nav.top').innerHTML = html;
+    fn.q('nav.bottom').innerHTML = html;
   }
   getEditors(){
     return  Array.from(this.target.querySelectorAll('.body'))    
