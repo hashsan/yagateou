@@ -1,5 +1,7 @@
 /*
 v1 create
+v2 ealyload 
+v3 if same src is silent
 */
 
 var fn={}
@@ -17,6 +19,13 @@ fn.rword=(l=8)=>{
   }
   return r;
 }
+
+fn.earlyload=(src)=>{return new Promise(sol=>{  
+  const img = new Image()
+  img.onload =()=>sol(src)
+  img.src=src  
+})}
+
 
 class yagateou{
   def_img = 'https://i.pinimg.com/564x/1c/1d/01/1c1d0124119724454a8cfc40ce2f8071.jpg';
@@ -74,7 +83,18 @@ class yagateou{
     //console.log(data.split('\n'))
     var src=data.split('\n').filter(d=>fn.isimg(d)).at(0)
     //console.log(src)
-    this.img.src = src||this.def_img
+    //v3 same src is silent
+    src = src || this.def_img
+    if(this.img.src === src){
+      return
+    }
+
+    //v2
+    fn.earlyload(src).then(d=>{
+      this.img.src=src
+    })    
+    
+    //this.img.src = src||this.def_img
     //console.log(this.img.src)    
   }
   setData=(data)=>{
