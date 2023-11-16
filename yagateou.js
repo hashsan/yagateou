@@ -131,6 +131,7 @@ v1 create
 v2 saveMissBlock
 v3 loading with bar moving
 v4 saveMissBlock retry
+v5 nav timing input
 */
 
 
@@ -165,8 +166,12 @@ export class yagateouSite{
       e.preventDefault()
       bar.go(30)     
       this.save().then(d=>bar.go(100))
-    }).press('Enter',(e)=>this.makeNav())
-      .press('*',(e)=>bar.go(10),500)
+    })
+      //.press('Enter',(e)=>this.makeNav()) //v5
+      .press('*',(e)=>{
+        this.makeNav() //v5
+        bar.go(10)
+      },500)
 
     //v2
     this.saveMissBlock()    
