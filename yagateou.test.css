@@ -179,14 +179,14 @@ a:has(img) {
   z-index:1;
   min-height:400px;  
 }
-img.shield{
+.shield{
   /*width:60%;*/
   height:400px;
   position:absolute;
   bottom:0;
   right:0;
 }
-img.shield{
+.shield{
   filter:grayscale(0.7) brightness(0.5);
   transition:filter 1s ease-in;
   margin:0;
