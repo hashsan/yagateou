@@ -1,0 +1,59 @@
+html,body{
+  margin:0;
+  padding:0;
+  color:whitesmoke;
+  font-size:18px;
+  font-family: 'Zen Antique', serif;
+  line-height:1.6;
+}
+html{
+  scroll-behavior:smooth;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+  cursor:pointer;
+}
+a:hover{
+  background:rgba(0,0,0,0.3);
+}
+body{
+  background:rgb(0,40,50);
+  overflow-y:scroll;
+}
+.frame img{
+  position:absolute;
+  object-fit:contain;
+  width:40%;
+  max-height:400px;
+  bottom:2rem;
+  right:0;
+  filter:grayscale(0.8) brightness(0.6);
+  z-index:0;
+}
+.frame [contenteditable]{
+  min-height:400px;
+  outline:none;
+  padding:2rem 0rem;
+  position:relative;
+  z-index:1;
+}
+
+.wrap{
+  width:calc(1rem * 30.1);  
+  display:flex;
+  flex-direction:column;
+  margin:auto;  
+  margin-top:4rem;
+  position:relative;  
+}
+
+.frame{
+  background:rgb(0,90,90);  
+  margin:auto;
+}
+
+footer{
+  margin-bottom:40vh;
+}
