@@ -8,6 +8,7 @@ v6 header footer image
 v7 effect to .vivid
 v8 img in a 
 v9 experience .ampfade
+v10 max-height 640px
 */
 
 :root{
@@ -72,6 +73,7 @@ header,footer,.frame{
   width:30%;
   margin-right:var(--space);
   border-radius:var(--border-radius);  
+  max-height: 640px; /*v10*/
 }
 .body{
   width:calc(70% - var(--space));
