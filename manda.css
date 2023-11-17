@@ -54,6 +54,9 @@ body{
   margin:auto;
 }
 
+header h1{
+  font-weight:inherit;
+}
 footer{
   margin-bottom:40vh;
 }
