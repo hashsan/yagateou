@@ -11,7 +11,7 @@ v9 experience .ampfade
 */
 
 :root{
-  --background:#212121;
+  --background:#000;
   --color:#eee;
   --writing:#f26;
   --link:#0ee;
@@ -172,12 +172,19 @@ a:has(img) {
   position:relative;  
 }
 
+.bar{
+  z-index:1;
+}
+.body{
+  z-index:1;
+  min-height:400px;  
+}
 img.shield{
-  width:60%;
+  /*width:60%;*/
+  height:400px;
   position:absolute;
   bottom:0;
   right:0;
-  z-index:-1;
 }
 img.shield{
   filter:grayscale(0.7) brightness(0.5);
