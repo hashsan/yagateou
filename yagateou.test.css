@@ -79,7 +79,8 @@ header,footer,.frame{
 */
 
 .body{
-  width:calc(70% - var(--space));
+  /* width:calc(70% - var(--space));*/
+  width:100%;  
   border:var(--border);
   border-radius:var(--border-radius);
   box-sizing:border-box;
