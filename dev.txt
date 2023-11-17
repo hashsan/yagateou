@@ -299,9 +299,7 @@ https://i.pinimg.com/236x/00/38/46/0038467f3241d56716b63a7123aca4af.jpg
 　６４０ｐｘとする。
 ---
 .shield {
-    width: 30%;
-    margin-right: var(--space);
-    border-radius: var(--border-radius);
+    ...
     max-height: 640px;
 }
 ---
