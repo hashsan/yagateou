@@ -118,7 +118,7 @@ class yagateou{
     if(!(this.ed.innerText ==='')){
       return false;
     }
-    return ture;    
+    return true;    
   }
   remove(){
     this.frame.remove();
