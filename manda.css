@@ -38,6 +38,9 @@ body{
   min-height:400px;
   outline:none;
   padding:2rem 0rem;
+
+  padding-bottom:4rem;
+  
   position:relative;
   z-index:1;
 }
