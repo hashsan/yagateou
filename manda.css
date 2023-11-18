@@ -19,7 +19,9 @@ a:hover{
   background:rgba(0,0,0,0.3);
 }
 body{
-  background:rgb(0,40,50);
+  /*background:rgb(0,40,50);*/
+  background:rgb(38,38,38);
+  
   overflow-y:scroll;
 }
 .frame img{
@@ -50,9 +52,17 @@ body{
 }
 
 .frame{
+    background: rgb(0,90,90);
+    background: url('//hashsan.github.io/manda/hiryu.jpg');
+    background-size: 100% auto;
+    margin: auto;  
+}
+/*
+.frame{
   background:rgb(0,90,90);  
   margin:auto;
 }
+*/
 
 header h1{
   font-weight:inherit;
